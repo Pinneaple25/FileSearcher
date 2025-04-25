@@ -30,7 +30,8 @@
         {
             BtnBuscar = new Button();
             TxtBuscar = new TextBox();
-            button1 = new Button();
+            BtnConfig = new Button();
+            OpenFolder = new FolderBrowserDialog();
             SuspendLayout();
             // 
             // BtnBuscar
@@ -41,7 +42,7 @@
             BtnBuscar.TabIndex = 0;
             BtnBuscar.Text = "Buscar";
             BtnBuscar.UseVisualStyleBackColor = true;
-            BtnBuscar.Click += this.BtnBuscar_Click;
+            BtnBuscar.Click += BtnBuscar_Click;
             // 
             // TxtBuscar
             // 
@@ -51,21 +52,22 @@
             TxtBuscar.Size = new Size(421, 34);
             TxtBuscar.TabIndex = 1;
             // 
-            // button1
+            // BtnConfig
             // 
-            button1.Location = new Point(259, 94);
-            button1.Name = "button1";
-            button1.Size = new Size(133, 29);
-            button1.TabIndex = 2;
-            button1.Text = "Configuración";
-            button1.UseVisualStyleBackColor = true;
+            BtnConfig.Location = new Point(259, 94);
+            BtnConfig.Name = "BtnConfig";
+            BtnConfig.Size = new Size(133, 29);
+            BtnConfig.TabIndex = 2;
+            BtnConfig.Text = "Configuración";
+            BtnConfig.UseVisualStyleBackColor = true;
+            BtnConfig.Click += BtnConfig_Click;
             // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(486, 170);
-            Controls.Add(button1);
+            Controls.Add(BtnConfig);
             Controls.Add(TxtBuscar);
             Controls.Add(BtnBuscar);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -81,6 +83,7 @@
 
         private Button BtnBuscar;
         private TextBox TxtBuscar;
-        private Button button1;
+        private Button BtnConfig;
+        private FolderBrowserDialog OpenFolder;
     }
 }
